@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "PaglaGPT · Official PaglaAI listing",
+      "hasCanvas": false,
+      "bodyTextLen": 2942,
+      "bodyTextHash": "b519c3175230d6ddd5e3c2519307dadc720adfa32286c988eb0acd5a609a95e5",
+      "bodyTextPrefix": "Skip to main content PaglaAI Store Chat Configuration Start chat",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "PaglaGPT · Official PaglaAI listing",
+      "hasCanvas": false,
+      "bodyTextLen": 2906,
+      "bodyTextHash": "e0744c3526ccb7fe06e48b4754767679cae59d998e8dc35735f23f199d26ee0c",
+      "bodyTextPrefix": "Skip to main content PaglaAI GPT STORE LISTING PaglaGPT By Pagla",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

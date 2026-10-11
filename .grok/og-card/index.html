@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Pagla Sans";
+      src: url("fonts/PaglaSans-Light.woff2") format("woff2");
+      font-weight: 300;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Pagla Sans";
+      src: url("fonts/PaglaSans-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Pagla Sans";
+      src: url("fonts/PaglaSans-Medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: block;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1920px;
+      height: 1080px;
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+    .card {
+      box-sizing: border-box;
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      color: #0A0A0B;
+      font-family: "Pagla Sans", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .face {
+      height: 400px;
+      width: auto;
+      display: block;
+      margin: 0 0 56px 0;
+    }
+    .title {
+      font-weight: 300;
+      font-size: 220px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0;
+      padding: 0;
+      color: #0A0A0B;
+    }
+    .tagline {
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      color: #6B707E;
+      margin: 18px 0 0 0;
+      padding: 0;
+    }
+    .builder {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: 0.18em;
+      color: #6B707E;
+      margin: 52px 0 0 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="face" src="face.png" alt="" />
+    <h1 class="title">PaglaGPT</h1>
+    <p class="tagline">Intelligence, Unhinged</p>
+    <p class="builder">PaglaAI</p>
+  </div>
+</body>
+</html>

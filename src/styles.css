@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Pagla Sans";
+  src: url("/fonts/PaglaSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pagla Sans";
+  src: url("/fonts/PaglaSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pagla Sans";
+  src: url("/fonts/PaglaSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pagla Sans";
+  src: url("/fonts/PaglaSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Pagla Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+    monospace;
+
+  --color-ink: var(--pagla-ink);
+  --color-paper: var(--pagla-paper);
+  --color-surface: var(--pagla-surface);
+  --color-border: var(--pagla-border);
+  --color-muted: var(--pagla-muted);
+  --color-accent: var(--pagla-accent);
+  --color-success: var(--pagla-success);
+  --color-warning: var(--pagla-warning);
+  --color-error: var(--pagla-error);
+  --color-info: var(--pagla-info);
+  --color-icon-canvas: var(--pagla-icon-canvas);
+
+  --text-display: clamp(2.25rem, 8vw, 3.5rem);
+  --text-title: clamp(1.75rem, 5vw, 2.5rem);
+  --text-h3: 1.75rem;
+  --text-h4: 1.375rem;
+  --text-bodyLarge: 1.125rem;
+  --text-small: 0.875rem;
+  --text-caption: 0.75rem;
+  --max-width-reading: 42rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-pill: 9999rem;
+
+  --shadow-border: 0 0 0 1px color-mix(in oklab, var(--pagla-ink) 6%, transparent),
+    0 1px 2px -1px color-mix(in oklab, var(--pagla-ink) 6%, transparent),
+    0 2px 4px 0 color-mix(in oklab, var(--pagla-ink) 4%, transparent);
+}
+
+:root {
+  --pagla-ink: #0a0a0b;
+  --pagla-paper: #ffffff;
+  --pagla-surface: #f5f5f3;
+  --pagla-border: #e8e8e6;
+  --pagla-muted: #6b707e;
+  --pagla-accent: #6b7eff;
+  --pagla-success: #3e9b6e;
+  --pagla-warning: #e0a23c;
+  --pagla-error: #c94a4a;
+  --pagla-info: #4a90c9;
+  --pagla-icon-canvas: #ffffff;
+  --pagla-duration: 200ms;
+  --pagla-duration-fast: 100ms;
+  --pagla-ease: cubic-bezier(0.2, 0, 0, 1);
+  --pagla-ease-in: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --pagla-ink: #f5f5f3;
+  --pagla-paper: #0a0a0b;
+  --pagla-surface: #17171a;
+  --pagla-border: #2a2a2e;
+  --pagla-muted: #9aa0ae;
+  --shadow-border: 0 0 0 1px color-mix(in oklab, var(--pagla-ink) 10%, transparent);
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --pagla-duration: 0ms;
+    --pagla-duration-fast: 0ms;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--pagla-paper);
+    color: var(--pagla-ink);
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--pagla-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--pagla-ink) 12%, transparent);
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  border-radius: var(--radius-md);
+  background: var(--pagla-ink);
+  color: var(--pagla-paper);
+  padding: 0.5rem 0.75rem;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+.prose-pagla {
+  max-width: 42rem;
+}
+.prose-pagla h1,
+.prose-pagla h2,
+.prose-pagla h3 {
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.prose-pagla p {
+  text-wrap: pretty;
+  color: var(--pagla-ink);
+}
+.prose-pagla a {
+  color: var(--pagla-ink);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.prose-pagla code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--pagla-surface);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+}
+.prose-pagla pre {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  background: var(--pagla-surface);
+  border: 1px solid var(--pagla-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  overflow-x: auto;
+}
+.prose-pagla pre code {
+  background: transparent;
+  padding: 0;
+}
+.prose-pagla ul,
+.prose-pagla ol {
+  padding-left: 1.25rem;
+}
+.prose-pagla li + li {
+  margin-top: 0.25rem;
+}
